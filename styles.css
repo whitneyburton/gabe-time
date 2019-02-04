@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  color: white;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-column-gap: 40px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #141434;
+  padding: 0 20px;
+}
+
+.history--aside {
+  grid-column: 1/2;
+  padding-right: 20px;
+  border-right: 1px solid #717E98;
+  min-height: 100vh;
+}
+
+.history--title {
+  margin: 35px 0 35px 20px;
+  color: #FFDA79;
+}
+
+.main--workouts {
+  grid-column: 2/3;
+}
+
+.card {
+  background-color: #414254;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+/* Gabes profile section */
+.profile--section {
+  grid-column: 3/4;
+}
+
+.card--profile {
+  display: flex;
+  width: 70%;
+  margin-bottom: 40px;
+  align-items: center;
+  padding: 5px;
+}
+
+.profile--picture {
+  height: 70px;
+  border-radius: 50px;
+}
+
+.logout--settings {
+  margin: auto;
+  padding-right: 1%;
+}
+
+.card--next-workout {
+  margin: 10px 0px;
+  height: 15%;
+}
+
+.next--container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.next--title {
+  color: #FFDA79;
+}
+
+.my--workouts {
+  color: #FFDA79;
+  font-weight: 500;
+}
+
+.icons--container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.my--workouts--container {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+
+.benchpress {
+  width: 30px;
+  height: 30px;
+}
+
+.card--workouts {
+  text-align: center;
+  display: flex;
+  height: 120px;
+}
+
+.workout--description {
+  margin: auto;
+}
+
+.my--workout--title {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.exercise--reps {
+  color: #717E98;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Gabe Time main */
+.gabetime--title {
+  color: #FFDA79;
+  text-align: center;
+}
+
+.h3--workout-details {
+  color: #FFDA79;
+}
+
+.card--large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 120px;
+}
+
+.workout--title {
+  grid-column: 1/4;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.div--workout-info {
+  justify-self: center;
+}
+
+.div--workout-info h6 {
+  color: #717E98;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.div--workout-info p {
+  text-align: center;
+}
+
+.card--small {
+  text-align: center;
+  border: 5px solid #414254;
+  height: 120px;
+}
+
+.card--small:hover {
+  border: 5px solid #717E98;
+}
+
+.card--small p {
+  color: #717E98;
+}
+
+.icon--body {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.card--badges {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+}
+
+.card--badges h4 {
+  color: #FFDA79;
+  font-weight: 300;
+  font-size: 1.1rem;
+  display: inline-block;
+  /* padding-bottom: 15px; */
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 
+  }
+
+  .history--aside,
+  .main--workouts,
+  .profile--section {
+    grid-column: 1/1;
+    border: none;
+  }
+
+  .profile--section {
+    grid-row: 1/2;
+  }
+
+  .history--aside {
+    grid-row: 2/3;
+    padding: 0;
+  }
+
+  .main--workouts {
+    grid-row: 3/4;
+  }
+
+  .card--profile,
+  .gabetime--title {
+    display: none;
+  }
+
+  .card--small {
+    width: 100%;
+  }
+
+  .hide {
+    display: block;
+  }
+}
